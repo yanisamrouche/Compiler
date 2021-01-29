@@ -5,10 +5,40 @@ Helpers
 lettre = [['a' .. 'z'] + ['A' .. 'Z']];
 
 Tokens
-
-test = 'test';
+number = ['0' .. '9']+;
+plus = '+';
+minus = '-';
+mult = '*';
+div = '/';
+mod = '%';
+equal = '=';
+inf = '<';
+not = '!';
+l_par = '(';
+r_par = ')';
+l_brack = '{';
+r_brack = '}';
+l_bar = '[';
+r_bar = ']';
+and = '&';
+or = '|';
+if = 'si';
+then = 'alors';
+else = 'sinon';
+while = 'tantque';
+do = 'faire';
+return = 'retour';
+semicolon = ';';
+read = 'lire';
+write = 'ecrire';
+eps = 'epsilon';
+int = 'entier';
+vrg = ',';
 espaces = (' ' | 13 | 10)+;
 commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
+id    = (lettre | '_' | '$') (lettre | ['0' .. '9'] | '_' | '$')*;
+
+
 
 Ignored Tokens
 
@@ -16,5 +46,46 @@ espaces, commentaire;
 
 Productions
 
-programme = test ;
+programme = l_declaration_var_b_opt l_function_dec;
+l_function_dec = {l_function_dec} function_dec l_function_dec | {epsilon6};
+function_dec = id l_par l_declaration_var r_par l_declaration_var_b_opt iblock;
+l_declaration_var_b_opt = {l_declaration_var_b_opt} l_declaration_var semicolon | {epsilon5};
+l_declaration_var = {l_declaration_var} var_declaration l_declaration_var_b | {epsilon4};
+l_declaration_var_b = {l_declaration_var_b} vrg var_declaration l_declaration_var_b | {epsilon7};
+var_declaration = {var_declaration} type var ;
+type = {int} int;
+var = {o_var} id | {tab_var} id l_bar expr r_bar;
+
+l_inst = {l_inst} inst l_inst | {epsilon1};
+inst = {iwrite} iwrite | {iread} iread | {iaffectation} iaffectation | {icall_function} icall_function | {iwhile} iwhile | {ireturn} ireturn | {iif} iif;
+iblock =  l_brack l_inst r_brack;
+iaffectation = var equal expr semicolon;
+
+iwrite = write l_par l_expr r_par semicolon;
+iread = read l_par r_par semicolon;
+
+call_function =  id l_par l_expr r_par;
+icall_function =  call_function semicolon;
+
+
+iif = {if} if expr then iblock ielse;
+ielse = {else} else iblock | {epsilon0};
+iwhile = while l_par expr r_par do iblock;
+ireturn = return expr semicolon;
+
+l_expr = {l_expr} expr l_expr_b | {epsilon2};
+l_expr_b = {l_expr_b} vrg expr l_expr_b | {epsilon3};
+
+expr  =  {or} expr or expr1 | expr1;
+expr1 =  {and} expr1 and expr2 | expr2;
+expr2 =  {equal} expr2 equal expr3 | {inf} expr2 inf expr3 | expr3;
+expr3 =  {plus} expr3 plus expr4 | {minus} expr3 minus expr4 | expr4;
+expr4 =  {mult} expr4 mult expr5 | {div} expr4 div expr5 | expr5;
+expr5 =  {not} not expr5 | expr6;
+expr6 =  {par} l_par expr r_par | {number} number | {var} var | {call_function} call_function;
+
+
+
+
+
 

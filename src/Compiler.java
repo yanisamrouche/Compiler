@@ -3,12 +3,13 @@ import sc.lexer.*;
 import sc.node.*;
 import java.io.*;
 import sa.*;
+/*
 import ts.*;
 import c3a.*;
 import nasm.*;
 import fg.*;
 import ig.*;
-
+*/
 
 public class Compiler
 {
@@ -82,7 +83,7 @@ public class Compiler
 		System.out.println("[PRINT SC]");
 		tree.apply(new Sc2Xml(baseName));
 	    }
-	    
+	    /*
 	    System.out.println("[BUILD SA] ");
 	    Sc2sa sc2sa = new Sc2sa();
 	    tree.apply(sc2sa);
@@ -167,11 +168,15 @@ public class Compiler
 	    if(outputPython){
 		System.out.println("Python output not implemented yet");
 	    }
+
+	     */
 	}
 	catch(Exception e){
 	    System.out.println(e.getMessage());
 	    System.exit(1);
 	}
+
+
     }
 
 
