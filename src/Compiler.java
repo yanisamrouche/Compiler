@@ -4,11 +4,11 @@ import sc.node.*;
 import java.io.*;
 import sa.*;
 import ts.*;
-import c3a.*;
+/*import c3a.*;
 import nasm.*;
 import fg.*;
 import ig.*;
-
+*/
 
 public class Compiler
 {
@@ -83,7 +83,7 @@ public class Compiler
 		tree.apply(new Sc2Xml(baseName));
 	    }
 	    
-	    System.out.println("[BUILD SA] ");
+	    /*	    System.out.println("[BUILD SA] ");
 	    Sc2sa sc2sa = new Sc2sa();
 	    tree.apply(sc2sa);
 	    SaNode saRoot = sc2sa.getRoot();
@@ -167,6 +167,7 @@ public class Compiler
 	    if(outputPython){
 		System.out.println("Python output not implemented yet");
 	    }
+	    */
 	}
 	catch(Exception e){
 	    System.out.println(e.getMessage());
