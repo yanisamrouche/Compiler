@@ -4,9 +4,9 @@
 #	jar cmf Compiler.mf Compiler.jar *.class sc sa ts nasm util c3a fg ig
 
 Compiler: Compiler.java #sa/*.java c3a/*.java ts/*.java nasm/*.java fg/*.java util/intset/*.java  util/graph/*.java ig/*.java
-#	javac sa/*.java
+	javac sa/*.java
 #	javac c3a/*.java
-#	javac ts/*.java
+	javac ts/*.java
 #	javac nasm/*.java
 #	javac fg/*.java
 #	javac util/intset/*.java
