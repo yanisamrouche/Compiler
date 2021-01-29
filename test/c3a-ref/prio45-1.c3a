@@ -1,0 +1,7 @@
+main	fbegin	#entree fonction
+	t1 = 0 + 1
+	t0 = 1
+	if 2 = t1 goto l0
+	t0 = 0
+l0	write t0	
+	fend

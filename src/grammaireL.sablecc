@@ -1,0 +1,20 @@
+Package sc;
+
+Helpers
+
+lettre = [['a' .. 'z'] + ['A' .. 'Z']];
+
+Tokens
+
+test = 'test';
+espaces = (' ' | 13 | 10)+;
+commentaire= '#' [[0 .. 0xffff] - [10 + 13]]* (10 | 13 | 10 13);
+
+Ignored Tokens
+
+espaces, commentaire;
+
+Productions
+
+programme = test ;
+

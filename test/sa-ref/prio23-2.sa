@@ -1,0 +1,23 @@
+<SaProg>
+ <SaLDec>
+  <SaDecFonc>
+   <nom>main</nom>
+   <SaInstBloc>
+    <SaLInst>
+     <SaInstEcriture>
+      <SaExpMult>
+       <SaExpInt>
+        <val>3</val>
+       </SaExpInt>
+       <SaExpNot>
+        <SaExpInt>
+         <val>10</val>
+        </SaExpInt>
+       </SaExpNot>
+      </SaExpMult>
+     </SaInstEcriture>
+    </SaLInst>
+   </SaInstBloc>
+  </SaDecFonc>
+ </SaLDec>
+</SaProg>

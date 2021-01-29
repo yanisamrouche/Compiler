@@ -1,0 +1,33 @@
+<SaProg>
+ <SaLDec>
+  <SaDecFonc>
+   <nom>main</nom>
+   <SaLDec>
+    <SaDecVar>
+     <nom>variable</nom>
+    </SaDecVar>
+   </SaLDec>
+   <SaInstBloc>
+    <SaLInst>
+     <SaInstAffect>
+      <SaVarSimple>
+       <nom>variable</nom>
+      </SaVarSimple>
+      <SaExpInt>
+       <val>6834</val>
+      </SaExpInt>
+     </SaInstAffect>
+     <SaLInst>
+      <SaInstEcriture>
+       <SaExpVar>
+        <SaVarSimple>
+         <nom>variable</nom>
+        </SaVarSimple>
+       </SaExpVar>
+      </SaInstEcriture>
+     </SaLInst>
+    </SaLInst>
+   </SaInstBloc>
+  </SaDecFonc>
+ </SaLDec>
+</SaProg>

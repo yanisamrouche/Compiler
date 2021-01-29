@@ -1,0 +1,15 @@
+main	fbegin	#entree fonction
+	base = 2
+	offset = 0
+	t0 = base + offset
+	tab[t0] = 34
+	offset = 1
+	t1 = base + offset
+	tab[t1] = 74
+	offset = 2
+	t2 = base + offset
+	tab[t2] = 16
+	write tab[2]	
+	write tab[3]	
+	write tab[4]	
+	fend

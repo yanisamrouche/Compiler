@@ -1,0 +1,6 @@
+main	fbegin	#entree fonction
+	var1 = 10
+	var2 = 34
+	t0 = var1 + var2
+	write t0	
+	fend

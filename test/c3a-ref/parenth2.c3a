@@ -1,0 +1,3 @@
+main	fbegin	#entree fonction
+	write 2	
+	fend
