@@ -83,13 +83,13 @@ public class Compiler
 		System.out.println("[PRINT SC]");
 		tree.apply(new Sc2Xml(baseName));
 	    }
-<<<<<<< HEAD
+
 	    /*
 	    System.out.println("[BUILD SA] ");
-=======
+
 	    
 	    /*	    System.out.println("[BUILD SA] ");
->>>>>>> 0258a2fcb452b5552d67ac4e4e94a07cfccbcb09
+
 	    Sc2sa sc2sa = new Sc2sa();
 	    tree.apply(sc2sa);
 	    SaNode saRoot = sc2sa.getRoot();
@@ -173,12 +173,12 @@ public class Compiler
 	    if(outputPython){
 		System.out.println("Python output not implemented yet");
 	    }
-<<<<<<< HEAD
+
 
 	     */
-=======
-	    */
->>>>>>> 0258a2fcb452b5552d67ac4e4e94a07cfccbcb09
+
+
+
 	}
 	catch(Exception e){
 	    System.out.println(e.getMessage());

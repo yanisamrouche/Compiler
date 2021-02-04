@@ -1,0 +1,7 @@
+Commande.txt
+java -jar ../sablecc/sablecc.jar grammaireL.sablecc
+javac Compiler.java
+java Compiler test -v 2
+more test.sc
+
+for /F %i in (' dir ..\test\input\*.l /b') do java Compiler ..\test\input\%i

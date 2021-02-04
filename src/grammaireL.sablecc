@@ -47,6 +47,7 @@ espaces, commentaire;
 Productions
 
 programme = l_declaration_var_b_opt l_function_dec;
+
 l_function_dec = {l_function_dec} function_dec l_function_dec | {epsilon6};
 function_dec = id l_par l_declaration_var r_par l_declaration_var_b_opt iblock;
 l_declaration_var_b_opt = {l_declaration_var_b_opt} l_declaration_var semicolon | {epsilon5};
@@ -58,20 +59,20 @@ var = {o_var} id | {tab_var} id l_bar expr r_bar;
 
 l_inst = {l_inst} inst l_inst | {epsilon1};
 inst = {iwrite} iwrite | {iread} iread | {iaffectation} iaffectation | {icall_function} icall_function | {iwhile} iwhile | {ireturn} ireturn | {iif} iif;
-iblock =  l_brack l_inst r_brack;
-iaffectation = var equal expr semicolon;
 
 iwrite = write l_par l_expr r_par semicolon;
 iread = read l_par r_par semicolon;
-
-call_function =  id l_par l_expr r_par;
+iaffectation = var equal expr semicolon;
 icall_function =  call_function semicolon;
+call_function =  id l_par l_expr r_par;
 
-
-iif = {if} if expr then iblock ielse;
-ielse = {else} else iblock | {epsilon0};
 iwhile = while l_par expr r_par do iblock;
 ireturn = return expr semicolon;
+iif = {if} if expr then iblock ielse;
+ielse = {else} else iblock | {epsilon0};
+
+
+iblock =  l_brack l_inst r_brack;
 
 l_expr = {l_expr} expr l_expr_b | {epsilon2};
 l_expr_b = {l_expr_b} vrg expr l_expr_b | {epsilon3};
