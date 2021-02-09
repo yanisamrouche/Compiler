@@ -77,13 +77,13 @@ iblock =  l_brack l_inst r_brack;
 l_expr = {l_expr} expr l_expr_b | {epsilon2};
 l_expr_b = {l_expr_b} vrg expr l_expr_b | {epsilon3};
 
-expr  =  {or} expr or expr1 | expr1;
-expr1 =  {and} expr1 and expr2 | expr2;
-expr2 =  {equal} expr2 equal expr3 | {inf} expr2 inf expr3 | expr3;
-expr3 =  {plus} expr3 plus expr4 | {minus} expr3 minus expr4 | expr4;
-expr4 =  {mult} expr4 mult expr5 | {div} expr4 div expr5 | expr5;
-expr5 =  {not} not expr5 | expr6;
-expr6 =  {par} l_par expr r_par | {number} number | {var} var | {call_function} call_function;
+expr  =  {or} expr or expr1 | {expr1} expr1;
+expr1 =  {and} expr1 and expr2 | {expr2} expr2;
+expr2 =  {equal} expr2 equal expr3 | {inf} expr2 inf expr3 | {expr3} expr3;
+expr3 =  {plus} expr3 plus expr4 | {minus} expr3 minus expr4 | {expr4} expr4;
+expr4 =  {mult} expr4 mult expr5 | {div} expr4 div expr5 | {expr5} expr5;
+expr5 =  {not} not expr5 | {expr6} expr6;
+expr6 =  {par} l_par expr r_par | {number} number | {var} var | {call_function} call_function | {read} read l_par r_par ;
 
 
 

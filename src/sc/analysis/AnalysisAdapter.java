@@ -213,18 +213,6 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAIblock(AIblock node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
-    public void caseAIaffectation(AIaffectation node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
     public void caseAIwrite(AIwrite node)
     {
         defaultCase(node);
@@ -237,13 +225,31 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseACallFunction(ACallFunction node)
+    public void caseAIaffectation(AIaffectation node)
     {
         defaultCase(node);
     }
 
     @Override
     public void caseAIcallFunction(AIcallFunction node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseACallFunction(ACallFunction node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAIwhile(AIwhile node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAIreturn(AIreturn node)
     {
         defaultCase(node);
     }
@@ -267,13 +273,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAIwhile(AIwhile node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
-    public void caseAIreturn(AIreturn node)
+    public void caseAIblock(AIblock node)
     {
         defaultCase(node);
     }
@@ -309,7 +309,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAExpr(AExpr node)
+    public void caseAExpr1Expr(AExpr1Expr node)
     {
         defaultCase(node);
     }
@@ -321,7 +321,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAExpr1(AExpr1 node)
+    public void caseAExpr2Expr1(AExpr2Expr1 node)
     {
         defaultCase(node);
     }
@@ -339,7 +339,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAExpr2(AExpr2 node)
+    public void caseAExpr3Expr2(AExpr3Expr2 node)
     {
         defaultCase(node);
     }
@@ -357,7 +357,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAExpr3(AExpr3 node)
+    public void caseAExpr4Expr3(AExpr4Expr3 node)
     {
         defaultCase(node);
     }
@@ -375,7 +375,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAExpr4(AExpr4 node)
+    public void caseAExpr5Expr4(AExpr5Expr4 node)
     {
         defaultCase(node);
     }
@@ -387,7 +387,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAExpr5(AExpr5 node)
+    public void caseAExpr6Expr5(AExpr6Expr5 node)
     {
         defaultCase(node);
     }
@@ -412,6 +412,12 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseACallFunctionExpr6(ACallFunctionExpr6 node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAReadExpr6(AReadExpr6 node)
     {
         defaultCase(node);
     }
