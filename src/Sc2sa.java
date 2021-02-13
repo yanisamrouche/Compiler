@@ -5,6 +5,42 @@ import sc.node.*;
 public class Sc2sa extends DepthFirstAdapter {
     private SaNode returnValue;
 
+    // programme = l_declaration_var_b_opt l_function_dec;
+    public void caseAProgramme(AProgramme node){
+        SaLDec var;
+        SaLDec function;
+        node.getLDeclarationVarBOpt().apply(this);
+        var = (SaLDec) this.returnValue;
+        node.getLFunctionDec().apply(this);
+        function = (SaLDec) this.returnValue;
+        this.returnValue = new SaProg(var,function);
+   }
+
+    // l_function_dec = {l_function_dec} function_dec l_function_dec | {epsilon6};
+    public void caseALFunctionDecLFunctionDec(ALFunctionDecLFunctionDec node){
+        SaDec func;
+        SaLDec list;
+        node.getFunctionDec().apply(this);
+        func = (SaDec) this.returnValue;
+        node.getLFunctionDec().apply(this);
+        list = (SaLDec) this.returnValue;
+        this.returnValue = new SaLDec(func, list);
+    }
+
+    // l_function_dec = {epsilon6};
+    public void caseAEpsilon6LFunctionDec(AEpsilon6LFunctionDec node){
+        this.returnValue = null;
+    }
+
+    // function_dec = id l_par l_declaration_var r_par l_declaration_var_b_opt iblock;
+    public void caseAFunctionDec(AFunctionDec node){
+
+
+
+    }
+
+
+
 
 
 
@@ -20,12 +56,14 @@ public class Sc2sa extends DepthFirstAdapter {
         op2 = (SaExp) this.returnValue;
         this.returnValue = new SaExpOr(op1, op2);
     }
+
     // expr = {expr1} expr1
     public void caseAExpr1Expr(AExpr1Expr node){
         SaExp op;
         node.getExpr1().apply(this);
         op = (SaExp) this.returnValue;
     }
+
     //expr1 =  {and} expr1 and expr2
     public void caseAAndExpr1(AAndExpr1 node){
         SaExp op1;
@@ -70,7 +108,7 @@ public class Sc2sa extends DepthFirstAdapter {
     }
 
     // expr2 = {expr3} expr3
-    public void caseAExpr3Exp2(AExpr3Expr2 node){
+    public void caseAExpr3Expr2(AExpr3Expr2 node){
         SaExp op;
         node.getExpr3().apply(this);
         op = (SaExp) this.returnValue;
