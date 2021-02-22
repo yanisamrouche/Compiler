@@ -135,12 +135,6 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
     public void caseAIntType(AIntType node)
     {
         defaultCase(node);
@@ -154,6 +148,12 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseATabVarVar(ATabVarVar node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
     {
         defaultCase(node);
     }
@@ -178,6 +178,12 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseAIreadInst(AIreadInst node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseAIblockInst(AIblockInst node)
     {
         defaultCase(node);
     }

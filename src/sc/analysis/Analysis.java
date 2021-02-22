@@ -22,14 +22,15 @@ public interface Analysis extends Switch
     void caseAEpsilon4LDeclarationVar(AEpsilon4LDeclarationVar node);
     void caseALDeclarationVarBLDeclarationVarB(ALDeclarationVarBLDeclarationVarB node);
     void caseAEpsilon7LDeclarationVarB(AEpsilon7LDeclarationVarB node);
-    void caseAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node);
     void caseAIntType(AIntType node);
     void caseAOVarVar(AOVarVar node);
     void caseATabVarVar(ATabVarVar node);
+    void caseAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node);
     void caseALInstLInst(ALInstLInst node);
     void caseAEpsilon1LInst(AEpsilon1LInst node);
     void caseAIwriteInst(AIwriteInst node);
     void caseAIreadInst(AIreadInst node);
+    void caseAIblockInst(AIblockInst node);
     void caseAIaffectationInst(AIaffectationInst node);
     void caseAIcallFunctionInst(AIcallFunctionInst node);
     void caseAIwhileInst(AIwhileInst node);

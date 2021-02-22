@@ -5,46 +5,46 @@ package sc.node;
 import sc.analysis.*;
 
 @SuppressWarnings("nls")
-public final class AExpr4 extends PExpr4
+public final class AExpr2Expr1 extends PExpr1
 {
-    private PExpr5 _expr5_;
+    private PExpr2 _expr2_;
 
-    public AExpr4()
+    public AExpr2Expr1()
     {
         // Constructor
     }
 
-    public AExpr4(
-        @SuppressWarnings("hiding") PExpr5 _expr5_)
+    public AExpr2Expr1(
+        @SuppressWarnings("hiding") PExpr2 _expr2_)
     {
         // Constructor
-        setExpr5(_expr5_);
+        setExpr2(_expr2_);
 
     }
 
     @Override
     public Object clone()
     {
-        return new AExpr4(
-            cloneNode(this._expr5_));
+        return new AExpr2Expr1(
+            cloneNode(this._expr2_));
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseAExpr4(this);
+        ((Analysis) sw).caseAExpr2Expr1(this);
     }
 
-    public PExpr5 getExpr5()
+    public PExpr2 getExpr2()
     {
-        return this._expr5_;
+        return this._expr2_;
     }
 
-    public void setExpr5(PExpr5 node)
+    public void setExpr2(PExpr2 node)
     {
-        if(this._expr5_ != null)
+        if(this._expr2_ != null)
         {
-            this._expr5_.parent(null);
+            this._expr2_.parent(null);
         }
 
         if(node != null)
@@ -57,23 +57,23 @@ public final class AExpr4 extends PExpr4
             node.parent(this);
         }
 
-        this._expr5_ = node;
+        this._expr2_ = node;
     }
 
     @Override
     public String toString()
     {
         return ""
-            + toString(this._expr5_);
+            + toString(this._expr2_);
     }
 
     @Override
     void removeChild(@SuppressWarnings("unused") Node child)
     {
         // Remove child
-        if(this._expr5_ == child)
+        if(this._expr2_ == child)
         {
-            this._expr5_ = null;
+            this._expr2_ = null;
             return;
         }
 
@@ -84,9 +84,9 @@ public final class AExpr4 extends PExpr4
     void replaceChild(@SuppressWarnings("unused") Node oldChild, @SuppressWarnings("unused") Node newChild)
     {
         // Replace child
-        if(this._expr5_ == oldChild)
+        if(this._expr2_ == oldChild)
         {
-            setExpr5((PExpr5) newChild);
+            setExpr2((PExpr2) newChild);
             return;
         }
 

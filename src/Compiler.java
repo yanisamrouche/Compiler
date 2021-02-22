@@ -56,7 +56,7 @@ public class Compiler
 		}
 	    else{
 		inputFileName = args[i];
-		//		System.out.println(inputFileName);
+			System.out.println(inputFileName);
 	    }
 	}
 	
@@ -73,22 +73,23 @@ public class Compiler
 	    e.printStackTrace();
 	} 
 	try {
+
 	    // Create a Parser instance.
 	    Parser p = new Parser(new Lexer(br));
 	    // Parse the input.
 	    System.out.println("[BUILD SC] ");
 	    Start tree = p.parse();
-	    
+
 	    if(verboseLevel > 1){
 		System.out.println("[PRINT SC]");
 		tree.apply(new Sc2Xml(baseName));
+
 	    }
 
-	    /*
 	    System.out.println("[BUILD SA] ");
 
 	    
-	    /*	    System.out.println("[BUILD SA] ");
+	    System.out.println("[BUILD SA] ");
 
 	    Sc2sa sc2sa = new Sc2sa();
 	    tree.apply(sc2sa);
@@ -98,6 +99,7 @@ public class Compiler
 		System.out.println("[PRINT SA]");
 		new Sa2Xml(saRoot, baseName);
 	    }
+	    /*
 	    
 	    System.out.println("[BUILD TS] ");
 	    Ts tableGlobale = new Sa2ts(saRoot).getTableGlobale();
@@ -174,8 +176,10 @@ public class Compiler
 		System.out.println("Python output not implemented yet");
 	    }
 
-
 	     */
+
+
+
 
 
 

@@ -274,31 +274,6 @@ public class DepthFirstAdapter extends AnalysisAdapter
         outAEpsilon7LDeclarationVarB(node);
     }
 
-    public void inAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
-    {
-        defaultIn(node);
-    }
-
-    public void outAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
-    {
-        defaultOut(node);
-    }
-
-    @Override
-    public void caseAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
-    {
-        inAVarDeclarationVarDeclaration(node);
-        if(node.getType() != null)
-        {
-            node.getType().apply(this);
-        }
-        if(node.getVar() != null)
-        {
-            node.getVar().apply(this);
-        }
-        outAVarDeclarationVarDeclaration(node);
-    }
-
     public void inAIntType(AIntType node)
     {
         defaultIn(node);
@@ -372,6 +347,31 @@ public class DepthFirstAdapter extends AnalysisAdapter
             node.getRBar().apply(this);
         }
         outATabVarVar(node);
+    }
+
+    public void inAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
+    {
+        defaultIn(node);
+    }
+
+    public void outAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseAVarDeclarationVarDeclaration(AVarDeclarationVarDeclaration node)
+    {
+        inAVarDeclarationVarDeclaration(node);
+        if(node.getType() != null)
+        {
+            node.getType().apply(this);
+        }
+        if(node.getVar() != null)
+        {
+            node.getVar().apply(this);
+        }
+        outAVarDeclarationVarDeclaration(node);
     }
 
     public void inALInstLInst(ALInstLInst node)
@@ -456,6 +456,27 @@ public class DepthFirstAdapter extends AnalysisAdapter
             node.getIread().apply(this);
         }
         outAIreadInst(node);
+    }
+
+    public void inAIblockInst(AIblockInst node)
+    {
+        defaultIn(node);
+    }
+
+    public void outAIblockInst(AIblockInst node)
+    {
+        defaultOut(node);
+    }
+
+    @Override
+    public void caseAIblockInst(AIblockInst node)
+    {
+        inAIblockInst(node);
+        if(node.getIblock() != null)
+        {
+            node.getIblock().apply(this);
+        }
+        outAIblockInst(node);
     }
 
     public void inAIaffectationInst(AIaffectationInst node)

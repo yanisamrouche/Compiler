@@ -5,46 +5,46 @@ package sc.node;
 import sc.analysis.*;
 
 @SuppressWarnings("nls")
-public final class AExpr2 extends PExpr2
+public final class AIblockInst extends PInst
 {
-    private PExpr3 _expr3_;
+    private PIblock _iblock_;
 
-    public AExpr2()
+    public AIblockInst()
     {
         // Constructor
     }
 
-    public AExpr2(
-        @SuppressWarnings("hiding") PExpr3 _expr3_)
+    public AIblockInst(
+        @SuppressWarnings("hiding") PIblock _iblock_)
     {
         // Constructor
-        setExpr3(_expr3_);
+        setIblock(_iblock_);
 
     }
 
     @Override
     public Object clone()
     {
-        return new AExpr2(
-            cloneNode(this._expr3_));
+        return new AIblockInst(
+            cloneNode(this._iblock_));
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseAExpr2(this);
+        ((Analysis) sw).caseAIblockInst(this);
     }
 
-    public PExpr3 getExpr3()
+    public PIblock getIblock()
     {
-        return this._expr3_;
+        return this._iblock_;
     }
 
-    public void setExpr3(PExpr3 node)
+    public void setIblock(PIblock node)
     {
-        if(this._expr3_ != null)
+        if(this._iblock_ != null)
         {
-            this._expr3_.parent(null);
+            this._iblock_.parent(null);
         }
 
         if(node != null)
@@ -57,23 +57,23 @@ public final class AExpr2 extends PExpr2
             node.parent(this);
         }
 
-        this._expr3_ = node;
+        this._iblock_ = node;
     }
 
     @Override
     public String toString()
     {
         return ""
-            + toString(this._expr3_);
+            + toString(this._iblock_);
     }
 
     @Override
     void removeChild(@SuppressWarnings("unused") Node child)
     {
         // Remove child
-        if(this._expr3_ == child)
+        if(this._iblock_ == child)
         {
-            this._expr3_ = null;
+            this._iblock_ = null;
             return;
         }
 
@@ -84,9 +84,9 @@ public final class AExpr2 extends PExpr2
     void replaceChild(@SuppressWarnings("unused") Node oldChild, @SuppressWarnings("unused") Node newChild)
     {
         // Replace child
-        if(this._expr3_ == oldChild)
+        if(this._iblock_ == oldChild)
         {
-            setExpr3((PExpr3) newChild);
+            setIblock((PIblock) newChild);
             return;
         }
 
