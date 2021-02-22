@@ -9,7 +9,7 @@ public final class AIwrite extends PIwrite
 {
     private TWrite _write_;
     private TLPar _lPar_;
-    private PLExpr _lExpr_;
+    private PExpr _expr_;
     private TRPar _rPar_;
     private TSemicolon _semicolon_;
 
@@ -21,7 +21,7 @@ public final class AIwrite extends PIwrite
     public AIwrite(
         @SuppressWarnings("hiding") TWrite _write_,
         @SuppressWarnings("hiding") TLPar _lPar_,
-        @SuppressWarnings("hiding") PLExpr _lExpr_,
+        @SuppressWarnings("hiding") PExpr _expr_,
         @SuppressWarnings("hiding") TRPar _rPar_,
         @SuppressWarnings("hiding") TSemicolon _semicolon_)
     {
@@ -30,7 +30,7 @@ public final class AIwrite extends PIwrite
 
         setLPar(_lPar_);
 
-        setLExpr(_lExpr_);
+        setExpr(_expr_);
 
         setRPar(_rPar_);
 
@@ -44,7 +44,7 @@ public final class AIwrite extends PIwrite
         return new AIwrite(
             cloneNode(this._write_),
             cloneNode(this._lPar_),
-            cloneNode(this._lExpr_),
+            cloneNode(this._expr_),
             cloneNode(this._rPar_),
             cloneNode(this._semicolon_));
     }
@@ -105,16 +105,16 @@ public final class AIwrite extends PIwrite
         this._lPar_ = node;
     }
 
-    public PLExpr getLExpr()
+    public PExpr getExpr()
     {
-        return this._lExpr_;
+        return this._expr_;
     }
 
-    public void setLExpr(PLExpr node)
+    public void setExpr(PExpr node)
     {
-        if(this._lExpr_ != null)
+        if(this._expr_ != null)
         {
-            this._lExpr_.parent(null);
+            this._expr_.parent(null);
         }
 
         if(node != null)
@@ -127,7 +127,7 @@ public final class AIwrite extends PIwrite
             node.parent(this);
         }
 
-        this._lExpr_ = node;
+        this._expr_ = node;
     }
 
     public TRPar getRPar()
@@ -186,7 +186,7 @@ public final class AIwrite extends PIwrite
         return ""
             + toString(this._write_)
             + toString(this._lPar_)
-            + toString(this._lExpr_)
+            + toString(this._expr_)
             + toString(this._rPar_)
             + toString(this._semicolon_);
     }
@@ -207,9 +207,9 @@ public final class AIwrite extends PIwrite
             return;
         }
 
-        if(this._lExpr_ == child)
+        if(this._expr_ == child)
         {
-            this._lExpr_ = null;
+            this._expr_ = null;
             return;
         }
 
@@ -244,9 +244,9 @@ public final class AIwrite extends PIwrite
             return;
         }
 
-        if(this._lExpr_ == oldChild)
+        if(this._expr_ == oldChild)
         {
-            setLExpr((PLExpr) newChild);
+            setExpr((PExpr) newChild);
             return;
         }
 

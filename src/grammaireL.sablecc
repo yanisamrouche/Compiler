@@ -61,7 +61,7 @@ var_declaration = {var_declaration} type var ;
 l_inst = {l_inst} inst l_inst | {epsilon1};
 inst = {iwrite} iwrite | {iread} iread | {iblock} iblock | {iaffectation} iaffectation | {icall_function} icall_function | {iwhile} iwhile | {ireturn} ireturn | {iif} iif ;
 
-iwrite = write l_par l_expr r_par semicolon;
+iwrite = write l_par expr r_par semicolon;
 iread = read l_par r_par semicolon;
 iaffectation = var equal expr semicolon;
 icall_function =  call_function semicolon;

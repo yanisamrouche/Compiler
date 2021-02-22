@@ -1085,16 +1085,16 @@ public class Parser
             // Block
         TWrite twriteNode2;
         TLPar tlparNode3;
-        PLExpr plexprNode4;
+        PExpr pexprNode4;
         TRPar trparNode5;
         TSemicolon tsemicolonNode6;
         twriteNode2 = (TWrite)nodeArrayList1.get(0);
         tlparNode3 = (TLPar)nodeArrayList2.get(0);
-        plexprNode4 = (PLExpr)nodeArrayList3.get(0);
+        pexprNode4 = (PExpr)nodeArrayList3.get(0);
         trparNode5 = (TRPar)nodeArrayList4.get(0);
         tsemicolonNode6 = (TSemicolon)nodeArrayList5.get(0);
 
-        piwriteNode1 = new AIwrite(twriteNode2, tlparNode3, plexprNode4, trparNode5, tsemicolonNode6);
+        piwriteNode1 = new AIwrite(twriteNode2, tlparNode3, pexprNode4, trparNode5, tsemicolonNode6);
         }
 	nodeList.add(piwriteNode1);
         return nodeList;
@@ -2008,7 +2008,7 @@ public class Parser
 			{{-1, ERROR, 86}, {0, SHIFT, 20}, {8, SHIFT, 21}, {9, SHIFT, 22}, {24, SHIFT, 23}, {29, SHIFT, 24}, },
 			{{-1, ERROR, 87}, {16, SHIFT, 41}, {23, SHIFT, 97}, },
 			{{-1, ERROR, 88}, {10, SHIFT, 98}, },
-			{{-1, REDUCE, 36}, {0, SHIFT, 20}, {8, SHIFT, 21}, {9, SHIFT, 22}, {24, SHIFT, 23}, {29, SHIFT, 24}, },
+			{{-1, ERROR, 89}, {0, SHIFT, 20}, {8, SHIFT, 21}, {9, SHIFT, 22}, {24, SHIFT, 23}, {29, SHIFT, 24}, },
 			{{-1, ERROR, 90}, {0, SHIFT, 20}, {8, SHIFT, 21}, {9, SHIFT, 22}, {24, SHIFT, 23}, {29, SHIFT, 24}, },
 			{{-1, REDUCE, 34}, },
 			{{-1, REDUCE, 14}, },
@@ -2018,7 +2018,7 @@ public class Parser
 			{{-1, ERROR, 96}, {10, SHIFT, 102}, {16, SHIFT, 41}, },
 			{{-1, REDUCE, 30}, },
 			{{-1, ERROR, 98}, {23, SHIFT, 103}, },
-			{{-1, ERROR, 99}, {10, SHIFT, 104}, },
+			{{-1, ERROR, 99}, {10, SHIFT, 104}, {16, SHIFT, 41}, },
 			{{-1, ERROR, 100}, {16, SHIFT, 41}, {23, SHIFT, 105}, },
 			{{-1, REDUCE, 33}, {19, SHIFT, 106}, },
 			{{-1, ERROR, 102}, {21, SHIFT, 108}, },
@@ -2055,9 +2055,9 @@ public class Parser
 			{{-1, 82}, },
 			{{-1, 107}, },
 			{{-1, 83}, {49, 63}, {95, 101}, {106, 110}, {108, 111}, },
-			{{-1, 52}, {89, 99}, },
+			{{-1, 52}, },
 			{{-1, 66}, {84, 94}, },
-			{{-1, 53}, {17, 27}, {22, 37}, {65, 84}, {67, 85}, {69, 87}, {86, 96}, {90, 100}, },
+			{{-1, 27}, {22, 37}, {39, 53}, {65, 84}, {67, 85}, {69, 87}, {86, 96}, {89, 99}, {90, 100}, },
 			{{-1, 28}, {41, 54}, },
 			{{-1, 29}, {42, 55}, },
 			{{-1, 30}, {43, 56}, {44, 57}, },
@@ -2103,7 +2103,7 @@ public class Parser
         };*/
     private static int[] errors;
 /*      {
-			0, 1, 2, 3, 4, 1, 5, 6, 2, 3, 7, 8, 5, 9, 10, 11, 2, 12, 5, 13, 14, 12, 12, 6, 15, 14, 14, 16, 17, 18, 19, 14, 14, 14, 10, 20, 14, 21, 13, 22, 14, 12, 12, 12, 12, 12, 12, 12, 12, 23, 14, 14, 13, 24, 17, 18, 19, 19, 14, 14, 14, 14, 25, 3, 14, 12, 13, 12, 6, 12, 6, 6, 26, 27, 25, 25, 25, 25, 25, 4, 25, 25, 25, 25, 24, 28, 12, 29, 13, 22, 12, 30, 27, 25, 13, 23, 21, 25, 4, 13, 29, 31, 32, 25, 4, 25, 23, 25, 23, 25, 25, 25, 
+			0, 1, 2, 3, 4, 1, 5, 6, 2, 3, 7, 8, 5, 9, 10, 11, 2, 12, 5, 13, 14, 12, 12, 6, 15, 14, 14, 16, 17, 18, 19, 14, 14, 14, 10, 20, 14, 21, 13, 22, 14, 12, 12, 12, 12, 12, 12, 12, 12, 23, 14, 14, 13, 24, 17, 18, 19, 19, 14, 14, 14, 14, 25, 3, 14, 12, 13, 12, 6, 12, 6, 6, 26, 27, 25, 25, 25, 25, 25, 4, 25, 25, 25, 25, 24, 28, 12, 29, 13, 12, 12, 30, 27, 25, 13, 23, 21, 25, 4, 21, 29, 31, 32, 25, 4, 25, 23, 25, 23, 25, 25, 25, 
         };*/
 
     static 
