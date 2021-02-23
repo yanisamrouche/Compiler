@@ -31,7 +31,21 @@ public class Sa2ts extends SaDepthFirstVisitor {
         }
         return super.visit(node);
     }
-
+    @Override
+    public Object visit(SaDecTab node) {
+        if(TableLocale!=null) {
+            if (TableGlobale.variables.size() < param){
+                TableLocale.addVar(node.getNom(), node.getTaille());
+            }
+            else{
+                TableLocale.addParam(node.getNom());
+            }
+        }
+        else {
+            TableGlobale.addVar(node.getNom(),node.getTaille());
+        }
+        return super.visit(node);
+    }
 
 
 
