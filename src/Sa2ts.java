@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import javafx.scene.control.Tab;
 import sa.*;
 import ts.Ts;
@@ -13,12 +14,30 @@ public class Sa2ts extends SaDepthFirstVisitor {
 
     public Sa2ts(SaNode saRoot){
         visit((SaProg) saRoot);
+=======
+import sa.*;
+import ts.*;
+
+public class Sa2ts extends SaDepthFirstVisitor {
+
+
+    Ts TableGlobale = new Ts();
+    Ts TableLocale;
+    int param=0;
+
+    public Sa2ts(SaNode saRoot) {
+        visit((SaProg) saRoot);
+
+>>>>>>> origin/master
     }
 
     public Ts getTableGlobale() {
         return TableGlobale;
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     @Override
     public Object visit(SaDecVar node) {
         if(TableLocale!=null) {
@@ -52,6 +71,7 @@ public class Sa2ts extends SaDepthFirstVisitor {
 
 
 
+<<<<<<< HEAD
     @Override
     public Object visit(SaDecFonc node) {
         if(node.getParametres()==null){
@@ -103,3 +123,9 @@ public class Sa2ts extends SaDepthFirstVisitor {
 
 
 }
+=======
+
+
+}
+
+>>>>>>> origin/master
