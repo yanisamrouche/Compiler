@@ -113,9 +113,6 @@ public class Sc2sa extends DepthFirstAdapter {
         this.returnValue = null;
     }
 
-
-
-
     // var = {o_var} id
     @Override
     public void caseAOVarVar(AOVarVar node) {

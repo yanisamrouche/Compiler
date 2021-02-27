@@ -33,8 +33,30 @@
      </ALInstLInst>
     </AIblock>
    </AFunctionDec>
-   <AEpsilon6LFunctionDec>
-   </AEpsilon6LFunctionDec>
+   <ALFunctionDecLFunctionDec>
+    <AFunctionDec>
+     <AEpsilon4LDeclarationVar>
+     </AEpsilon4LDeclarationVar>
+     <AEpsilon5LDeclarationVarBOpt>
+     </AEpsilon5LDeclarationVarBOpt>
+     <AIblock>
+      <ALInstLInst>
+       <AIcallFunctionInst>
+        <AIcallFunction>
+         <ACallFunction>
+          <AEpsilon2LExpr>
+          </AEpsilon2LExpr>
+         </ACallFunction>
+        </AIcallFunction>
+       </AIcallFunctionInst>
+       <AEpsilon1LInst>
+       </AEpsilon1LInst>
+      </ALInstLInst>
+     </AIblock>
+    </AFunctionDec>
+    <AEpsilon6LFunctionDec>
+    </AEpsilon6LFunctionDec>
+   </ALFunctionDecLFunctionDec>
   </ALFunctionDecLFunctionDec>
  </AProgramme>
 </Start>
