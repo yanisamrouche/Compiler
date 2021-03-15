@@ -3,13 +3,8 @@ import sc.lexer.*;
 import sc.node.*;
 import java.io.*;
 import sa.*;
-/*
-import ts.*;
-/*import c3a.*;
-import nasm.*;
-import fg.*;
-import ig.*;
-*/
+import ts.Ts;
+
 
 public class Compiler
 {
@@ -99,7 +94,7 @@ public class Compiler
 		System.out.println("[PRINT SA]");
 		new Sa2Xml(saRoot, baseName);
 	    }
-	    /*
+
 	    
 	    System.out.println("[BUILD TS] ");
 	    Ts tableGlobale = new Sa2ts(saRoot).getTableGlobale();
@@ -117,6 +112,7 @@ public class Compiler
 		    saEval.affiche(baseName);
 		}
 	    }
+	    /*
 	    
 	    System.out.println("[BUILD C3A] ");
 	    C3a c3a = new Sa2c3a(saRoot, tableGlobale).getC3a();
