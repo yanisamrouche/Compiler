@@ -1,93 +1,24 @@
 <SaProg>
  <SaLDec>
-  <SaDecTab>
-  </SaDecTab>
- </SaLDec>
- <SaLDec>
   <SaDecFonc>
    <nom>main</nom>
    <SaInstBloc>
     <SaLInst>
-     <SaInstAffect>
-      <SaVarIndicee>
-       <SaExpInt>
-        <val>0</val>
-       </SaExpInt>
-      </SaVarIndicee>
-      <SaExpInt>
-       <val>1</val>
-      </SaExpInt>
-     </SaInstAffect>
-     <SaLInst>
-      <SaInstAffect>
-       <SaVarIndicee>
-        <SaExpVar>
-         <SaVarIndicee>
-          <SaExpInt>
-           <val>0</val>
-          </SaExpInt>
-         </SaVarIndicee>
-        </SaExpVar>
-       </SaVarIndicee>
-       <SaExpInt>
-        <val>12</val>
-       </SaExpInt>
-      </SaInstAffect>
-      <SaLInst>
-       <SaInstAffect>
-        <SaVarIndicee>
-         <SaExpAdd>
-          <SaExpVar>
-           <SaVarIndicee>
-            <SaExpInt>
-             <val>0</val>
-            </SaExpInt>
-           </SaVarIndicee>
-          </SaExpVar>
-          <SaExpInt>
-           <val>1</val>
-          </SaExpInt>
-         </SaExpAdd>
-        </SaVarIndicee>
+     <SaInstEcriture>
+      <SaExpAdd>
+       <SaExpAdd>
         <SaExpInt>
-         <val>13</val>
+         <val>2</val>
         </SaExpInt>
-       </SaInstAffect>
-       <SaLInst>
-        <SaInstEcriture>
-         <SaExpVar>
-          <SaVarIndicee>
-           <SaExpInt>
-            <val>0</val>
-           </SaExpInt>
-          </SaVarIndicee>
-         </SaExpVar>
-        </SaInstEcriture>
-        <SaLInst>
-         <SaInstEcriture>
-          <SaExpVar>
-           <SaVarIndicee>
-            <SaExpInt>
-             <val>1</val>
-            </SaExpInt>
-           </SaVarIndicee>
-          </SaExpVar>
-         </SaInstEcriture>
-         <SaLInst>
-          <SaInstEcriture>
-           <SaExpVar>
-            <SaVarIndicee>
-             <SaExpInt>
-              <val>2</val>
-             </SaExpInt>
-            </SaVarIndicee>
-           </SaExpVar>
-          </SaInstEcriture>
-         </SaLInst>
-        </SaLInst>
-       </SaLInst>
-      </SaLInst>
-     </SaLInst>
+        <SaExpInt>
+         <val>4</val>
+        </SaExpInt>
+       </SaExpAdd>
+       <SaExpInt>
+        <val>8</val>
+       </SaExpInt>
+      </SaExpAdd>
+     </SaInstEcriture>
     </SaLInst>
    </SaInstBloc>
   </SaDecFonc>

@@ -4,6 +4,7 @@ import sc.node.*;
 import java.io.*;
 import sa.*;
 import ts.Ts;
+import c3a.*;
 
 
 public class Compiler
@@ -112,7 +113,7 @@ public class Compiler
 		    saEval.affiche(baseName);
 		}
 	    }
-	    /*
+
 	    
 	    System.out.println("[BUILD C3A] ");
 	    C3a c3a = new Sa2c3a(saRoot, tableGlobale).getC3a();
@@ -121,6 +122,8 @@ public class Compiler
 		System.out.println("[PRINT C3A] ");
 		c3a.affiche(baseName);
 	    }
+
+	    /*
 	    
 	    if(verboseLevel > 0){
 		System.out.println("[EXEC C3A]");
