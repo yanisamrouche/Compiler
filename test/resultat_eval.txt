@@ -1,0 +1,10 @@
+
+Évaluation de Execution de l'arbre abstrait :
+51/83 correct ( 61.45%)
+Évaluation de Table des Symboles :
+59/83 correct ( 71.08%)
+Évaluation de Code 3 Adresses :
+35/83 correct ( 42.17%)
+Évaluation de Execution du nasm :
+0/83 correct (  0.00%)
+

@@ -5,19 +5,8 @@
    <SaInstBloc>
     <SaLInst>
      <SaInstEcriture>
-      <SaExpAdd>
-       <SaExpAdd>
-        <SaExpInt>
-         <val>2</val>
-        </SaExpInt>
-        <SaExpInt>
-         <val>4</val>
-        </SaExpInt>
-       </SaExpAdd>
-       <SaExpInt>
-        <val>8</val>
-       </SaExpInt>
-      </SaExpAdd>
+      <SaExpModulo>
+      </SaExpModulo>
      </SaInstEcriture>
     </SaLInst>
    </SaInstBloc>
