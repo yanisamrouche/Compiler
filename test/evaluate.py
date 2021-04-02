@@ -17,7 +17,7 @@ outVerbose = open(os.devnull,"w")
 
 ################################################################################
 def compileCompiler() :
-  print("Compiling Compiler.java...", end="", file=outVerbose)
+  print("Compiling Compiler.java...", end="", file=outVerbose )
   proc = subprocess.Popen("cd %s && javac Compiler.java"%srcPath, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   errMess = proc.stderr.read().decode('utf8')
   returnCode = proc.wait()
