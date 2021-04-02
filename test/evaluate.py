@@ -34,7 +34,7 @@ def compileCompiler() :
 ################################################################################
 def deleteClasses() :
 
-  for root, subdirs, files in os.walk("%s.."%srcPath) :
+  for root, subdirs, files in os.walk("%s.."%srcPath):
     if ".git" in root :
       continue
     for filename in files :

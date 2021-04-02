@@ -76,6 +76,14 @@ public class Sa2c3a extends SaDepthFirstVisitor <C3aOperand> {
         return tmp;
     }
 
+    public C3aOperand visit(SaExpModulo node) {
+        C3aOperand op1 = node.getOp1().accept(this);
+        C3aOperand op2 = node.getOp2().accept(this);
+        C3aTemp tmp = c3a.newTemp();
+        c3a.ajouteInst(new C3aInstMod(op1, op2, tmp, ""));
+        return tmp;
+    }
+
     public C3aOperand visit(SaExpMult node) {
         C3aOperand op1 = node.getOp1().accept(this);
         C3aOperand op2 = node.getOp2().accept(this);

@@ -63,6 +63,7 @@ public interface Analysis extends Switch
     void caseAExpr4Expr3(AExpr4Expr3 node);
     void caseAMultExpr4(AMultExpr4 node);
     void caseADivExpr4(ADivExpr4 node);
+    void caseAModExpr4(AModExpr4 node);
     void caseAExpr5Expr4(AExpr5Expr4 node);
     void caseANotExpr5(ANotExpr5 node);
     void caseAExpr6Expr5(AExpr6Expr5 node);

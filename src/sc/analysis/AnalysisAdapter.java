@@ -381,6 +381,12 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
+    public void caseAModExpr4(AModExpr4 node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
     public void caseAExpr5Expr4(AExpr5Expr4 node)
     {
         defaultCase(node);

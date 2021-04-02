@@ -488,6 +488,19 @@ public class Sc2sa extends DepthFirstAdapter {
         op2 = (SaExp) this.returnValue;
         this.returnValue = new SaExpMult(op1,op2);
     }
+
+    @Override
+    public void caseAModExpr4(AModExpr4 node)
+    {
+        SaExp op1 = null;
+        SaExp op2 = null;
+        node.getExpr4().apply(this);
+        op1 = (SaExp) this.returnValue;
+        node.getMod().apply(this);
+        node.getExpr5().apply(this);
+        op2 = (SaExp) this.returnValue;
+        this.returnValue = new SaExpMult(op1,op2);
+    }
     // expr4 =  {div} expr4 div expr5
     @Override
     public void caseADivExpr4(ADivExpr4 node){
